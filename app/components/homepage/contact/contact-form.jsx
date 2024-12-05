@@ -1,7 +1,7 @@
 "use client";
 // @flow strict
 import { isValidEmail } from "@/utils/check-email";
-import axios from "axios";
+// import axios from "axios";
 import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-toastify";
@@ -35,10 +35,10 @@ function ContactForm() {
 
     try {
       setIsLoading(true);
-      const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_APP_URL}/api/contact`,
-        userInput
-      );
+      // const res = await axios.post(
+      //   `${process.env.NEXT_PUBLIC_APP_URL}/api/contact`,
+      //   userInput
+      // );
 
       toast.success("Message sent successfully!");
       setUserInput({
